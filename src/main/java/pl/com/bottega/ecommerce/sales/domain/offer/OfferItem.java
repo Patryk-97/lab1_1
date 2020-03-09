@@ -47,7 +47,7 @@ public class OfferItem {
             discountValue = discountValue.add(discount);
         }
 
-        this.totalCost = product.getProductPrice()
+        this.totalCost = product.getPrice()
                                 .getDenomination()
                                 .multiply(new BigDecimal(quantity))
                                 .subtract(discountValue);
@@ -110,49 +110,49 @@ public class OfferItem {
      * @return
      */
     public boolean sameAs(OfferItem other, double delta) {
-        if (this.product.getProductPrice()
+        if (this.product.getPrice()
                         .getDenomination() == null) {
             if (other.getProduct()
-                     .getProductPrice()
+                     .getPrice()
                      .getDenomination() != null) {
                 return false;
             }
-        } else if (!this.product.getProductPrice()
+        } else if (!this.product.getPrice()
                                 .getDenomination()
                                 .equals(other.getProduct()
-                                             .getProductPrice()
+                                             .getPrice()
                                              .getDenomination())) {
             return false;
         }
-        if (this.product.getProductName() == null) {
+        if (this.product.getName() == null) {
             if (other.getProduct()
-                     .getProductName() != null) {
+                     .getName() != null) {
                 return false;
             }
-        } else if (!this.product.getProductName()
+        } else if (!this.product.getName()
                                 .equals(other.getProduct()
-                                             .getProductName())) {
+                                             .getName())) {
             return false;
         }
 
-        if (this.product.getProductId() == null) {
+        if (this.product.getId() == null) {
             if (other.getProduct()
-                     .getProductId() != null) {
+                     .getId() != null) {
                 return false;
             }
-        } else if (!this.product.getProductId()
+        } else if (!this.product.getId()
                                 .equals(other.getProduct()
-                                             .getProductId())) {
+                                             .getId())) {
             return false;
         }
-        if (this.product.getProductType() == null) {
+        if (this.product.getType() == null) {
             if (other.getProduct()
-                     .getProductType() != null) {
+                     .getType() != null) {
                 return false;
             }
-        } else if (!this.product.getProductType()
+        } else if (!this.product.getType()
                                 .equals(other.getProduct()
-                                             .getProductType())) {
+                                             .getType())) {
             return false;
         }
 

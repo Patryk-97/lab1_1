@@ -22,23 +22,23 @@ public class Product {
         this.type = type;
     }
 
-    public String getProductId() {
+    public String getId() {
         return this.id;
     }
 
-    public Money getProductPrice() {
+    public Money getPrice() {
         return this.price;
     }
 
-    public String getProductName() {
+    public String getName() {
         return this.name;
     }
 
-    public Date getProductSnapshotDate() {
+    public Date getSnapshotDate() {
         return this.snapshotDate;
     }
 
-    public String getProductType() {
+    public String getType() {
         return this.type;
     }
 }
