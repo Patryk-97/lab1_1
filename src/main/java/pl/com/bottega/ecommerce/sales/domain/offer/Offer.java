@@ -88,3 +88,7 @@ public class Offer {
     }
 
 }
+
+// total cost jako operacja
+
+// create product and money class
